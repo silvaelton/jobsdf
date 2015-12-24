@@ -1,0 +1,22 @@
+.row
+  .col-md-12  
+    %h2
+      %b Sincronizadas #{@list.count} Vagas
+
+%hr/    
+.row
+  .col-md-12
+    %table.table.table-striped.table-bordered.datatable
+      %thead 
+        %tr   
+          %th Titulo
+          %th Descrição
+          %th Data
+          %th Link
+      %tbody 
+        - @list.each do |i|
+          %tr 
+            %td.col-md-2= i.title
+            %td= i.description
+            %td.col-md-1= i.date.strftime("%d/%m/%Y")
+            %td.col-md-1= link_to "acessar", i.link
