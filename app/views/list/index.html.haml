@@ -13,10 +13,12 @@
           %th Descrição
           %th Data
           %th Link
+          %th Fonte
       %tbody 
         - @list.each do |i|
           %tr 
             %td.col-md-2= i.title
-            %td= i.description
+            %td= i.description.html_safe
             %td.col-md-1= i.date.strftime("%d/%m/%Y")
             %td.col-md-1= link_to "acessar", i.link
+            %td.col-md-1= i.ref

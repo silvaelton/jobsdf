@@ -13,12 +13,16 @@
 
 ActiveRecord::Schema.define(version: 20151224212051) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "list_jobs", force: :cascade do |t|
     t.string   "title"
     t.string   "description"
     t.string   "link"
     t.date     "date"
     t.date     "collect_date"
+    t.string   "ref"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end

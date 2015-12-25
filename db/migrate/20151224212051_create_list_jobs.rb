@@ -6,6 +6,7 @@ class CreateListJobs < ActiveRecord::Migration
       t.string :link
       t.date :date
       t.date :collect_date
+      t.string :ref
 
       t.timestamps null: false
     end

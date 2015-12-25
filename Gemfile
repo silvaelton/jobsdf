@@ -11,6 +11,8 @@ gem 'nokogiri'
 gem 'haml-rails'
 gem 'jquery-datatables-rails', '~> 3.3.0'
 
+gem 'pg'
+
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug'

@@ -39,7 +39,10 @@ module Collect
               title: inside_title,
               description: inside_description,
               link: link_job[0],
-              date: Date.parse(inside_date)
+              date: Date.parse(inside_date),
+              collect_date: Date.today,
+              ref: "correio braziliense"
+
             })
 
             list.save
